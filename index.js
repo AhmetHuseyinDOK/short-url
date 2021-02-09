@@ -20,6 +20,6 @@ app.get("/:url", async (req, res) => {
   res.redirect(await URLService.resolve(req.params.url));
 });
 
-app.listen("1453", () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("listening");
 });
